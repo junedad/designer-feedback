@@ -1,0 +1,33 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>Page de test</title>
+<style>
+body{font:15px system-ui;margin:0;background:#fff;color:#222}
+header{display:flex;gap:16px;padding:16px 32px;border-bottom:1px solid #eee}
+nav a{margin-right:12px;color:#1b55f5}
+main{padding:32px;display:grid;gap:24px;grid-template-columns:repeat(2,360px)}
+.card{border:1px solid #ddd;border-radius:12px;padding:16px}
+.card-header h2{margin:0 0 8px;font-size:18px}
+.btn{display:inline-flex;gap:6px;align-items:center;background:#131d38;color:#fff;border:0;border-radius:8px;padding:8px 14px}
+.btn svg{width:16px;height:16px}
+</style></head><body>
+<header><strong>Site de test</strong><nav aria-label="Principale"><a href="/a">Accueil</a><a href="/b">Médias</a></nav></header>
+<main>
+  <div class="card" data-testid="carte-produit">
+    <div class="card-header"><h2>Assets récents</h2></div>
+    <div class="card-body"><p>Un texte avec du <strong>gras</strong> dedans.</p>
+      <button class="btn" id="valider"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span>Valider</span></button>
+    </div>
+  </div>
+  <div class="card"><div><div><img alt="Vignette" width="320" height="180" style="background:linear-gradient(45deg,#3377ff,#9f90ff);display:block;border-radius:8px"></div></div>
+    <p>Bloc sans attributs</p><my-widget></my-widget></div>
+</main>
+<div style="height:1400px"></div>
+<script>
+customElements.define('my-widget', class extends HTMLElement { connectedCallback(){ const r=this.attachShadow({mode:'open'}); r.innerHTML='<button part="b" style="padding:6px 10px">Bouton shadow</button>'; } });
+function AssetCard(){} function CardFooter(){} function Button(){}
+document.getElementById('valider')['__reactFiber$x1'] = { type: 'button', return: { type: Button, return: { type: { $$typeof: 1, render: CardFooter }, return: { type: AssetCard, return: null } } } };
+window.touchesPage=[]; window.clicsPage=[];
+addEventListener('keydown', e => touchesPage.push(e.key));
+document.addEventListener('click', e => clicsPage.push(e.target.tagName));
+// piège à focus façon modale
+document.addEventListener('focusin', e => window.focusVole = (window.focusVole||0)+1);
+</script></body></html>
