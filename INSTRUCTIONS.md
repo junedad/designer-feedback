@@ -45,7 +45,7 @@ Un feedback = un commentaire + une ou plusieurs captures. Pour **ajouter une cap
 
 ## 3. Relire, trier, partager
 
-- Dans le panneau latéral, ouvrez la page **Review** : vous y voyez tous vos feedbacks sous forme de tableau. Vous pouvez modifier un commentaire, **changer l'ordre en glissant-déposant**, marquer un feedback comme traité, fusionner ou supprimer.
+- En haut du panneau latéral, l’icône **Ouvrir la review** ouvre la page **Review** : vous y voyez tous vos feedbacks sous forme de tableau. Vous pouvez modifier un commentaire, **changer l'ordre en glissant-déposant**, marquer un feedback comme traité, fusionner ou supprimer.
 - **Copier** : le bouton de copie met dans le presse-papiers un texte avec les images, que vous pouvez coller directement dans **Notion, Jira, un e-mail, Google Docs**…
 - **Exporter** :
   - `.zip` : un fichier texte (Markdown) + un dossier `images`.
